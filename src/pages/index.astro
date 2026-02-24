@@ -745,7 +745,7 @@ const benefits = [
 		</section>
 
 		{/* --- SEÇÃO "VOCÊ PRECISA?" --- */}
-		<section class="needs-section py-20 relative z-20 px-6">
+		<section class="needs-section py-20 pt-0 relative z-20 px-6">
 			<div class="max-w-5xl mx-auto">
 				<div class="needs-grid">
 					{/* --- Card Esquerdo --- */}
@@ -786,26 +786,10 @@ const benefits = [
 					{/* --- Card Direito --- */}
 					<div class="needs-card needs-card--right">
 						<ul class="needs-checklist" id="needs-checklist">
-							<li
-								class="needs-item needs-item--checked"
-								data-checked="true"
-							>
-								<span class="needs-icon needs-icon--check">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="14"
-										height="14"
-										viewBox="0 0 24 24"
-										fill="none"
-									>
-										<path
-											d="M5 13l4 4L19 7"
-											stroke="#9AEBF7"
-											stroke-width="2.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"></path>
-									</svg>
-								</span>
+							<li class="needs-item" data-checked="false">
+								<span class="needs-icon needs-icon--dash"
+									>—</span
+								>
 								<span class="needs-text"
 									>Deseja aumentar a taxa de conversão do seu
 									site.</span
@@ -843,6 +827,418 @@ const benefits = [
 				</div>
 			</div>
 		</section>
+
+		{/* --- SEÇÃO "PROCESSO DE CRIAÇÃO" --- */}
+		<section class="process-section py-24 relative z-20 px-6">
+			<div class="max-w-6xl mx-auto">
+				{/* Badge */}
+				<div class="flex justify-center mb-6">
+					<span class="process-badge">✦ Etapas</span>
+				</div>
+
+				{/* Título */}
+				<h2 class="process-main-title">Processo de Criação</h2>
+
+				{/* Subtítulo */}
+				<p class="process-subtitle">
+					O processo de criação da sua página de alto padrão é
+					dividido em 06 pilares fundamentais. Cada um deles foi
+					pensado cuidadosamente para que toda a sua experiência seja
+					única !
+				</p>
+
+				{/* Instrução de interação */}
+				<div class="flex justify-center mb-12">
+					<span class="process-instruction">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"
+							></path>
+							<path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"
+							></path>
+							<path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"
+							></path>
+							<path
+								d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 17"
+							></path>
+						</svg>
+						Passe o mouse ou toque o dedo em cada número
+					</span>
+				</div>
+
+				{/* Cards Container */}
+				<div class="process-cards" id="process-cards">
+					<div class="process-card" data-step="1" data-active="false">
+						<div class="process-card-collapsed">
+							<span class="process-card-number">01</span>
+						</div>
+						<div class="process-card-expanded">
+							<span class="process-card-step-number">01</span>
+							<span class="process-card-step-badge"
+								>✦ Passo 1</span
+							>
+							<h3 class="process-card-title">Briefing</h3>
+							<p class="process-card-desc">
+								Vamos entender profundamente o seu projeto, seus
+								objetivos e o público que deseja alcançar.
+							</p>
+						</div>
+					</div>
+
+					<div class="process-card" data-step="2" data-active="false">
+						<div class="process-card-collapsed">
+							<span class="process-card-number">02</span>
+						</div>
+						<div class="process-card-expanded">
+							<span class="process-card-step-number">02</span>
+							<span class="process-card-step-badge"
+								>✦ Passo 2</span
+							>
+							<h3 class="process-card-title">Configurações</h3>
+							<p class="process-card-desc">
+								Vamos definir as configurações iniciais do seu
+								site, caso ainda não tenha um já existente.
+							</p>
+						</div>
+					</div>
+
+					<div class="process-card" data-step="3" data-active="false">
+						<div class="process-card-collapsed">
+							<span class="process-card-number">03</span>
+						</div>
+						<div class="process-card-expanded">
+							<span class="process-card-step-number">03</span>
+							<span class="process-card-step-badge"
+								>✦ Passo 3</span
+							>
+							<h3 class="process-card-title">Alinhamento</h3>
+							<p class="process-card-desc">
+								Vamos estabelecer todas as preferências e
+								referências para a construção da sua página.
+							</p>
+						</div>
+					</div>
+
+					<div class="process-card" data-step="4" data-active="false">
+						<div class="process-card-collapsed">
+							<span class="process-card-number">04</span>
+						</div>
+						<div class="process-card-expanded">
+							<span class="process-card-step-number">04</span>
+							<span class="process-card-step-badge"
+								>✦ Passo 4</span
+							>
+							<h3 class="process-card-title">Desenvolvimento</h3>
+							<p class="process-card-desc">
+								Aqui a sua página de alto padrão já estará em
+								desenvolvimento e logo estará pronta para
+								acessar.
+							</p>
+						</div>
+					</div>
+
+					<div class="process-card" data-step="5" data-active="false">
+						<div class="process-card-collapsed">
+							<span class="process-card-number">05</span>
+						</div>
+						<div class="process-card-expanded">
+							<span class="process-card-step-number">05</span>
+							<span class="process-card-step-badge"
+								>✦ Passo 5</span
+							>
+							<h3 class="process-card-title">Apresentação</h3>
+							<p class="process-card-desc">
+								Sua página está pronta ! Agora você já poderá
+								analisar atentamente todos os detalhes e
+								solicitar alguma alteração caso julgue
+								necessário.
+							</p>
+						</div>
+					</div>
+
+					<div class="process-card" data-step="6" data-active="false">
+						<div class="process-card-collapsed">
+							<span class="process-card-number">06</span>
+						</div>
+						<div class="process-card-expanded">
+							<span class="process-card-step-number">06</span>
+							<span class="process-card-step-badge"
+								>✦ Passo 6</span
+							>
+							<h3 class="process-card-title">Entrega</h3>
+							<p class="process-card-desc">
+								Sua página de alto padrão estará 100% finalizada
+								e pronta para ser utilizada
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<style>
+			/* --- PROCESSO DE CRIAÇÃO --- */
+			.process-section {
+				background-color: transparent;
+			}
+
+			.process-badge {
+				font-family: "Paralucent", sans-serif;
+				font-size: 14px;
+				font-weight: 400;
+				color: #abaeb4;
+				padding: 8px 20px;
+				border: 1px solid #2a2d35;
+				border-radius: 999px;
+				letter-spacing: 0.5px;
+			}
+
+			.process-main-title {
+				font-family: "Paralucent", sans-serif;
+				font-size: 56px;
+				font-weight: 500;
+				color: #e8ebf0;
+				text-align: center;
+				margin: 0 0 20px 0;
+				line-height: 1.1;
+				font-style: italic;
+			}
+
+			.process-subtitle {
+				font-family: "Paralucent", sans-serif;
+				font-size: 16px;
+				font-weight: 300;
+				color: #abaeb4;
+				text-align: center;
+				max-width: 700px;
+				margin: 0 auto 24px auto;
+				line-height: 1.6;
+			}
+
+			.process-instruction {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				font-family: "Paralucent", sans-serif;
+				font-size: 14px;
+				font-weight: 300;
+				color: #5c666f;
+				padding: 10px 24px;
+				background: rgba(255, 255, 255, 0.03);
+				border-radius: 999px;
+				border: 1px solid rgba(255, 255, 255, 0.06);
+			}
+
+			/* Cards Container */
+			.process-cards {
+				display: flex;
+				gap: 10px;
+				width: 100%;
+				height: 320px;
+			}
+
+			/* Card individual */
+			.process-card {
+				position: relative;
+				border-radius: 20px;
+				overflow: hidden;
+				cursor: pointer;
+				transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+				flex: 1;
+				min-width: 0;
+				border: 1.5px solid #1f2125;
+				background: linear-gradient(180deg, #151720 0%, #0c0d14 100%);
+			}
+
+			.process-card[data-active="true"] {
+				flex: 3.5;
+				background: #ffffff;
+				border-color: #e0e0e0;
+			}
+
+			/* Collapsed state */
+			.process-card-collapsed {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				padding-bottom: 30px;
+				transition: opacity 0.3s ease;
+			}
+
+			.process-card[data-active="true"] .process-card-collapsed {
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			.process-card-number {
+				font-family: "Paralucent", sans-serif;
+				font-size: 28px;
+				font-weight: 500;
+				color: #5c666f;
+				background: rgba(255, 255, 255, 0.06);
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			/* Expanded state */
+			.process-card-expanded {
+				position: absolute;
+				inset: 0;
+				padding: 32px 28px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.35s ease 0.15s;
+			}
+
+			.process-card[data-active="true"] .process-card-expanded {
+				opacity: 1;
+				pointer-events: auto;
+			}
+
+			.process-card-step-number {
+				font-family: "Paralucent", sans-serif;
+				font-size: 32px;
+				font-weight: 600;
+				color: #1a1a1a;
+				margin-bottom: 16px;
+			}
+
+			.process-card-step-badge {
+				display: inline-flex;
+				align-items: center;
+				width: fit-content;
+				font-family: "Paralucent", sans-serif;
+				font-size: 13px;
+				font-weight: 400;
+				color: #333;
+				padding: 6px 16px;
+				border: 1.5px solid #d0d0d0;
+				border-radius: 999px;
+				margin-bottom: 20px;
+				letter-spacing: 0.3px;
+			}
+
+			.process-card-title {
+				font-family: "Paralucent", sans-serif;
+				font-size: 28px;
+				font-weight: 700;
+				color: #1a1a1a;
+				margin: 0 0 12px 0;
+				line-height: 1.2;
+			}
+
+			.process-card-desc {
+				font-family: "Paralucent", sans-serif;
+				font-size: 15px;
+				font-weight: 300;
+				color: #555;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			/* Responsividade */
+			@media (max-width: 768px) {
+				.process-main-title {
+					font-size: 36px;
+				}
+
+				.process-subtitle {
+					font-size: 14px;
+				}
+
+				.process-cards {
+					flex-direction: column;
+					height: auto;
+				}
+
+				.process-card {
+					border-radius: 16px;
+					height: 80px;
+					transition:
+						height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+						flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+				}
+
+				.process-card[data-active="true"] {
+					height: 280px;
+					flex: none;
+				}
+
+				.process-card-collapsed {
+					align-items: center;
+					justify-content: center;
+					padding-bottom: 0;
+				}
+
+				.process-card-number {
+					font-size: 22px;
+					width: 46px;
+					height: 46px;
+				}
+
+				.process-card-title {
+					font-size: 22px;
+				}
+			}
+		</style>
+
+		<script is:inline>
+			document.addEventListener("DOMContentLoaded", () => {
+				const cards = document.querySelectorAll(
+					"#process-cards .process-card",
+				);
+
+				function activateCard(card) {
+					cards.forEach((c) =>
+						c.setAttribute("data-active", "false"),
+					);
+					card.setAttribute("data-active", "true");
+				}
+
+				// Desktop: hover
+				cards.forEach((card) => {
+					card.addEventListener("mouseenter", () => {
+						activateCard(card);
+					});
+				});
+
+				// Mobile: click/touch
+				cards.forEach((card) => {
+					card.addEventListener("click", () => {
+						activateCard(card);
+					});
+				});
+
+				// Quando o mouse sai da área inteira, fechar todos
+				const container = document.getElementById("process-cards");
+				if (container) {
+					container.addEventListener("mouseleave", () => {
+						cards.forEach((c) =>
+							c.setAttribute("data-active", "false"),
+						);
+					});
+				}
+			});
+		</script>
 
 		<style>
 			.needs-section {
@@ -969,7 +1365,7 @@ const benefits = [
 				background: transparent;
 				border: 1.5px solid #3a3d45;
 				color: #5c666f;
-				font-size: 13px;
+				font-size: 9px;
 				font-weight: 700;
 				line-height: 1;
 			}
