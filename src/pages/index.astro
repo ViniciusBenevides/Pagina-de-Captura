@@ -4,7 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import background from "../assets/bg1-desktop-webp.png";
 import CircuitBackground from "../components/CircuitBackground.astro";
 import { Image } from "astro:assets";
-import astroLogo2 from "../assets/astro-framework1720735660.logowik.com-Recuperado2.png";
+import VirtusApex from "../assets/astro-framework1720735660.logowik.com-Recuperado2.png";
+import astroLogoFull from "../assets/logo-astra.png";
 
 import drogariaImg from "../assets/drogariacruzeiro_.jpg";
 import moradaImg from "../assets/moradadossonhoswr.jpg";
@@ -292,7 +293,7 @@ const benefits = [
 				class="mt-10 mb-8 opacity-100 hover:opacity-100 transition-opacity duration-500"
 			>
 				<Image
-					src={astroLogo2}
+					src={VirtusApex}
 					alt="Astro Framework Logo"
 					width={324.5}
 					height={75}
@@ -984,6 +985,791 @@ const benefits = [
 				</div>
 			</div>
 		</section>
+
+		{/* --- SEÇÃO "QUANTO CUSTA?" --- */}
+		<section class="pricing-section py-24 relative z-20 px-6">
+			<div class="max-w-7xl mx-auto pricing-layout">
+				{
+					/* --- Coluna Esquerda (Logo + Investimento + @da Virtus Apex) --- */
+				}
+				<div class="pricing-left">
+					<div class="pricing-left-top">
+						<Image
+							src={astroLogoFull}
+							alt="Logo"
+							width={80}
+							height={80}
+							class="pricing-logo-icon"
+						/>
+						<div class="pricing-investimento-btn">
+							<span>Investimento</span>
+						</div>
+					</div>
+					<div class="pricing-left-bottom">
+						<Image
+							src={VirtusApex}
+							alt="Logo"
+							width={350}
+							height={350}
+							class="pricing-logo-bottom"
+						/>
+					</div>
+				</div>
+
+				{/* --- Coluna Central (Card / Phone Mockup) --- */}
+				<div class="pricing-center">
+					<div class="pricing-phone-card">
+						{/* Notch */}
+						<div class="pricing-phone-notch">
+							<div class="pricing-phone-notch-inner"></div>
+						</div>
+
+						<div class="pricing-phone-content">
+							<h2 class="pricing-title">Quanto custa?</h2>
+
+							<p class="pricing-desc">
+								Quanto custaria para você <strong
+									>perder dinheiro</strong
+								> por não: gerar uma experiência exclusiva que irá
+								elevar a percepção de valor do seu produto, otimizar
+								seu investimento em tráfego e suas conversões?
+							</p>
+
+							<div class="pricing-divider"></div>
+
+							<p class="pricing-subtitle">
+								Eu te garanto que uma landing page exclusiva<br
+								/>
+								custa <span class="pricing-highlight"
+									>muito menos e vale muito mais.</span
+								>
+							</p>
+
+							<div class="pricing-value" id="pricing-value">
+								R$ <span class="pricing-digit" id="digit-1"
+									>6</span
+								>?<span class="pricing-digit" id="digit-2"
+									>9</span
+								>?
+							</div>
+
+							{/* Spinner Button */}
+							<div
+								class="mt-6 relative group w-[320px] h-[60px] mx-auto cursor-pointer z-10"
+							>
+								<div
+									class="absolute -inset-10 rounded-full bg-white/20 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+								>
+								</div>
+								<div
+									class="flash-overlay absolute inset-0 rounded-full bg-white pointer-events-none z-20 mix-blend-overlay"
+								>
+								</div>
+								<div
+									class="absolute inset-0 rounded-full overflow-hidden p-[1.5px] bg-[#5C666F]"
+								>
+									<div
+										class="conic-spinner absolute inset-[-100%] w-[300%] h-[300%] left-[-100%] top-[-100%]"
+									>
+									</div>
+									<div
+										class="h-full w-full bg-[#0F1115] rounded-full relative z-10"
+									>
+									</div>
+								</div>
+								<span
+									class="absolute top-0 left-[30px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+								></span>
+								<span
+									class="absolute top-0 right-[30px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+								></span>
+								<span
+									class="absolute bottom-0 left-[30px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+								></span>
+								<span
+									class="absolute bottom-0 right-[30px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+								></span>
+								<a
+									href="https://wa.me/5562981752097?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+									target="_blank"
+									rel="noopener noreferrer"
+									class="absolute inset-0 z-30 flex items-center justify-center rounded-full"
+								>
+									<span
+										class="tracking-widest font-medium mr-3"
+										style="font-family: 'Paralucent', sans-serif; font-size: 15px; color: #E8EBF0;"
+									>
+										ENVIAR MENSAGEM
+									</span>
+									<span
+										class="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="22"
+											height="22"
+											viewBox="0 0 24 24"
+											fill="none"
+										>
+											<path
+												d="M5 19.5L19.5 5"
+												stroke="#9AEBF7"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"></path>
+											<path
+												d="M9.5 5H19.5V15"
+												stroke="#9AEBF7"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"></path>
+										</svg>
+									</span>
+								</a>
+							</div>
+						</div>
+
+						{/* Barcode */}
+						<div class="pricing-barcode" id="pricing-barcode"></div>
+					</div>
+				</div>
+
+				{/* --- Coluna Direita (Benefícios) --- */}
+				<div class="pricing-right">
+					<div class="pricing-benefit">
+						<span class="pricing-benefit-dot"></span>
+						<div>
+							<strong class="pricing-benefit-title"
+								>Entrega rápida:</strong
+							>
+							<span class="pricing-benefit-text"
+								>sua landing page pronta em poucos dias!</span
+							>
+						</div>
+					</div>
+					<div class="pricing-benefit">
+						<span class="pricing-benefit-dot"></span>
+						<div>
+							<strong class="pricing-benefit-title"
+								>Exclusividade:</strong
+							>
+							<span class="pricing-benefit-text"
+								>uma página única que somente você terá.</span
+							>
+						</div>
+					</div>
+					<div class="pricing-benefit">
+						<span class="pricing-benefit-dot"></span>
+						<div>
+							<strong class="pricing-benefit-title"
+								>Segurança:</strong
+							>
+							<span class="pricing-benefit-text"
+								>meu suporte por 10 dias após o projeto
+								entregue.</span
+							>
+						</div>
+					</div>
+					<div class="pricing-benefit">
+						<span class="pricing-benefit-dot"></span>
+						<div>
+							<strong class="pricing-benefit-title"
+								>Performance:</strong
+							>
+							<span class="pricing-benefit-text"
+								>seu site carregando em menos de 3s, pronto para
+								converter.</span
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<style>
+			/* --- SEÇÃO QUANTO CUSTA --- */
+			.pricing-section {
+				background-color: transparent;
+			}
+
+			.pricing-layout {
+				display: grid;
+				grid-template-columns: 200px 1fr 260px;
+				gap: 40px;
+				align-items: center;
+			}
+
+			/* --- Coluna Esquerda --- */
+			.pricing-left {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+			}
+
+			.pricing-left-top {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+
+			.pricing-logo-icon {
+				opacity: 0.7;
+				filter: brightness(1.2);
+			}
+
+			.pricing-investimento-btn {
+				padding: 10px 28px;
+				border: 1px solid #2a2d35;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.03);
+			}
+
+			.pricing-investimento-btn span {
+				font-family: "Paralucent", sans-serif;
+				font-size: 14px;
+				font-weight: 400;
+				color: #abaeb4;
+				letter-spacing: 0.5px;
+			}
+
+			.pricing-left-bottom {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 4px;
+			}
+
+			.pricing-author-name {
+				font-family: "Paralucent", sans-serif;
+				font-size: 16px;
+				font-weight: 500;
+				color: #e8ebf0;
+				margin: 0;
+				letter-spacing: 1px;
+			}
+
+			.pricing-author-role {
+				font-family: "Paralucent", sans-serif;
+				font-size: 10px;
+				font-weight: 300;
+				color: #5c666f;
+				margin: 0 0 8px 0;
+				letter-spacing: 3px;
+			}
+
+			.pricing-logo-bottom {
+				opacity: 1;
+				width: 320px;
+				height: auto;
+				object-fit: contain;
+			}
+
+			/* --- Coluna Central (Phone Card) --- */
+			.pricing-center {
+				display: flex;
+				justify-content: center;
+			}
+
+			.pricing-phone-card {
+				background: linear-gradient(180deg, #13151c 0%, #0a0b10 100%);
+				border: 1px solid #1f2125;
+				border-radius: 28px;
+				width: 420px;
+				padding: 0 0 24px 0;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.pricing-phone-notch {
+				display: flex;
+				justify-content: center;
+				padding-top: 10px;
+			}
+
+			.pricing-phone-notch-inner {
+				width: 100px;
+				height: 6px;
+				background: #2a2d35;
+				border-radius: 999px;
+			}
+
+			.pricing-phone-content {
+				padding: 32px 36px 0 36px;
+				text-align: center;
+			}
+
+			.pricing-title {
+				font-family: "Paralucent", sans-serif;
+				font-size: 36px;
+				font-weight: 700;
+				color: #e8ebf0;
+				margin: 0 0 20px 0;
+			}
+
+			.pricing-desc {
+				font-family: "Paralucent", sans-serif;
+				font-size: 14px;
+				font-weight: 300;
+				color: #abaeb4;
+				line-height: 1.7;
+				margin: 0 0 24px 0;
+			}
+
+			.pricing-desc strong {
+				color: #e8ebf0;
+				font-weight: 600;
+			}
+
+			.pricing-divider {
+				width: 60px;
+				height: 2px;
+				background: #2a2d35;
+				margin: 0 auto 24px auto;
+			}
+
+			.pricing-subtitle {
+				font-family: "Paralucent", sans-serif;
+				font-size: 15px;
+				font-weight: 300;
+				color: #abaeb4;
+				line-height: 1.6;
+				margin: 0 0 16px 0;
+			}
+
+			.pricing-highlight {
+				color: #5173c9;
+				font-weight: 500;
+			}
+
+			.pricing-value {
+				font-family: "Paralucent", sans-serif;
+				font-size: 64px;
+				font-weight: 800;
+				color: #e8ebf0;
+				margin: 0 0 8px 0;
+				letter-spacing: 2px;
+				line-height: 1;
+			}
+
+			.pricing-digit {
+				display: inline-block;
+				min-width: 0.6em;
+				text-align: center;
+			}
+
+			/* Barcode */
+			.pricing-barcode {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				gap: 2px;
+				height: 40px;
+				padding: 16px 40px 0 40px;
+				opacity: 0.4;
+			}
+
+			.pricing-barcode span {
+				display: inline-block;
+				background: #abaeb4;
+				border-radius: 1px;
+			}
+
+			/* --- Coluna Direita (Benefícios) --- */
+			.pricing-right {
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
+			}
+
+			.pricing-benefit {
+				display: flex;
+				gap: 14px;
+				align-items: center;
+			}
+
+			.pricing-benefit-dot {
+				width: 10px;
+				height: 10px;
+				background: #3b82f6;
+				border-radius: 50%;
+				margin-top: 5px;
+				flex-shrink: 0;
+				box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+			}
+
+			.pricing-benefit-title {
+				font-family: "Paralucent", sans-serif;
+				font-size: 15px;
+				font-weight: 600;
+				color: #136040;
+			}
+
+			.pricing-benefit-text {
+				font-family: "Paralucent", sans-serif;
+				font-size: 14px;
+				font-weight: 300;
+				color: #abaeb4;
+				line-height: 1.5;
+			}
+
+			/* --- Responsividade --- */
+			@media (max-width: 1024px) {
+				.pricing-layout {
+					grid-template-columns: 1fr;
+					gap: 40px;
+				}
+
+				.pricing-left {
+					flex-direction: row;
+					justify-content: center;
+					gap: 40px;
+				}
+
+				.pricing-right {
+					max-width: 420px;
+					margin: 0 auto;
+				}
+			}
+
+			@media (max-width: 640px) {
+				.pricing-phone-card {
+					width: 100%;
+					max-width: 380px;
+				}
+
+				.pricing-value {
+					font-size: 48px;
+				}
+
+				.pricing-title {
+					font-size: 28px;
+				}
+
+				.pricing-left {
+					flex-direction: column;
+				}
+			}
+		</style>
+
+		<script is:inline>
+			document.addEventListener("DOMContentLoaded", () => {
+				// --- Randomize pricing digits ---
+				const digit1 = document.getElementById("digit-1");
+				const digit2 = document.getElementById("digit-2");
+				const pricingValue = document.getElementById("pricing-value");
+
+				if (pricingValue && digit1 && digit2) {
+					// Get the full text content and find ? positions
+					function getRandomDigit(allowZero) {
+						if (allowZero) {
+							return Math.floor(Math.random() * 10);
+						}
+						return Math.floor(Math.random() * 9) + 1;
+					}
+
+					function getRandomFourDigit() {
+						// First digit: 1-9 (no leading zero)
+						const d1 = Math.floor(Math.random() * 9) + 1;
+						const d2 = Math.floor(Math.random() * 10);
+						const d3 = Math.floor(Math.random() * 10);
+						const d4 = Math.floor(Math.random() * 10);
+						return "" + d1 + d2 + d3 + d4;
+					}
+
+					setInterval(() => {
+						const num = getRandomFourDigit();
+						// Format as R$ D?D?
+						digit1.textContent = num[0];
+						digit2.textContent = num[2];
+						// Update the ? characters too
+						pricingValue.innerHTML =
+							'R$ <span class="pricing-digit" id="digit-1">' +
+							num[0] +
+							"</span>" +
+							num[1] +
+							'<span class="pricing-digit" id="digit-2">' +
+							num[2] +
+							"</span>" +
+							num[3];
+					}, 100);
+				}
+
+				// --- Generate barcode ---
+				const barcodeEl = document.getElementById("pricing-barcode");
+				if (barcodeEl) {
+					for (let i = 0; i < 60; i++) {
+						const bar = document.createElement("span");
+						const w = Math.random() > 0.5 ? 3 : 1.5;
+						const h = 20 + Math.random() * 20;
+						bar.style.width = w + "px";
+						bar.style.height = h + "px";
+						barcodeEl.appendChild(bar);
+					}
+				}
+			});
+		</script>
+
+		{/* --- SEÇÃO "PERGUNTAS FREQUENTES" (FAQ) --- */}
+		<section class="faq-section py-24 relative z-20 px-6">
+			{/* Grid background */}
+			<div class="faq-grid-bg"></div>
+			{/* Watermark */}
+			<div class="faq-watermark">FAQ</div>
+
+			<div class="max-w-3xl mx-auto relative z-10">
+				<h2 class="faq-main-title">Perguntas Frequentes</h2>
+
+				<div class="faq-list" id="faq-list">
+					<div class="faq-item">
+						<button class="faq-question" aria-expanded="false">
+							<span class="faq-dash">—</span>
+							<span class="faq-question-text"
+								>O que é copy colaborativa ?</span
+							>
+						</button>
+						<div class="faq-answer">
+							<p>
+								Se você não tiver a copy da sua página, ou seja,
+								o texto que estará contido na mesma, nós
+								poderemos criar juntos. Com as informações que
+								você me fornecer sobre o seu produto/serviço,
+								utilizarei meus conhecimentos e ferramentas de
+								inteligência artificial para criar a copy. Mas é
+								importante ressaltar, copywriting não é a minha
+								área de especialização. A contratação isolada de
+								um copywriter profissional será mais positiva
+								para a efetivação dos seus resultados.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-question" aria-expanded="false">
+							<span class="faq-dash">—</span>
+							<span class="faq-question-text"
+								>Qual o tempo de produção ?</span
+							>
+						</button>
+						<div class="faq-answer">
+							<p>
+								O tempo de produção é de até 14 dias, podendo
+								ter uma entrega mais curta ou prolongada
+								dependendo da quantidade de informações na
+								página.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-question" aria-expanded="false">
+							<span class="faq-dash">—</span>
+							<span class="faq-question-text"
+								>Qual é a forma de pagamento ?</span
+							>
+						</button>
+						<div class="faq-answer">
+							<p>
+								A forma de pagamento é via PIX ou transferência
+								bancária. Podendo ser acertado o valor integral
+								ou 50% no início do projeto e o restante na
+								finalização.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-question" aria-expanded="false">
+							<span class="faq-dash">—</span>
+							<span class="faq-question-text"
+								>Poderei alterar meu projeto ?</span
+							>
+						</button>
+						<div class="faq-answer">
+							<p>
+								Sim ! Após receber sua página pronta, você
+								poderá analisá-la com calma e solicitar ajustes
+								caso julgue necessário. Mas vale ressaltar, se
+								alguma alteração envolver a adição de novas
+								seções ou informações, poderá resultar em
+								acréscimos no valor.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<style>
+			/* --- SEÇÃO FAQ --- */
+			.faq-section {
+				position: relative;
+				overflow: hidden;
+				background-color: transparent;
+			}
+
+			.faq-grid-bg {
+				position: absolute;
+				inset: 0;
+				background-image:
+					linear-gradient(
+						rgba(255, 255, 255, 0.03) 1px,
+						transparent 1px
+					),
+					linear-gradient(
+						90deg,
+						rgba(255, 255, 255, 0.03) 1px,
+						transparent 1px
+					);
+				background-size: 60px 60px;
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			.faq-watermark {
+				position: absolute;
+				top: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-family: "Paralucent", sans-serif;
+				font-size: 180px;
+				font-weight: 900;
+				color: rgba(255, 255, 255, 0.03);
+				letter-spacing: 20px;
+				pointer-events: none;
+				z-index: 0;
+				user-select: none;
+				line-height: 1;
+			}
+
+			.faq-main-title {
+				font-family: "Paralucent", sans-serif;
+				font-size: 42px;
+				font-weight: 700;
+				color: #e8ebf0;
+				text-align: center;
+				margin: 0 0 48px 0;
+				position: relative;
+				z-index: 1;
+			}
+
+			.faq-list {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.faq-item {
+				background: rgba(255, 255, 255, 0.02);
+				border: 1px solid #1f2228;
+				border-radius: 14px;
+				overflow: hidden;
+				transition: border-color 0.3s ease;
+			}
+
+			.faq-item:hover {
+				border-color: #2a2f38;
+			}
+
+			.faq-question {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				padding: 22px 28px;
+				background: none;
+				border: none;
+				cursor: pointer;
+				text-align: left;
+			}
+
+			.faq-dash {
+				font-family: "Paralucent", sans-serif;
+				font-size: 18px;
+				font-weight: 600;
+				color: #e8ebf0;
+				flex-shrink: 0;
+			}
+
+			.faq-question-text {
+				font-family: "Paralucent", sans-serif;
+				font-size: 15px;
+				font-weight: 600;
+				color: #e8ebf0;
+				letter-spacing: 0.2px;
+			}
+
+			.faq-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition:
+					max-height 0.4s ease,
+					padding 0.4s ease;
+				padding: 0 28px 0 56px;
+			}
+
+			.faq-item.active .faq-answer {
+				max-height: 300px;
+				padding: 0 28px 22px 56px;
+			}
+
+			.faq-answer p {
+				font-family: "Paralucent", sans-serif;
+				font-size: 14px;
+				font-weight: 300;
+				color: #abaeb4;
+				line-height: 1.7;
+				margin: 0;
+			}
+
+			@media (max-width: 640px) {
+				.faq-main-title {
+					font-size: 30px;
+				}
+
+				.faq-watermark {
+					font-size: 100px;
+				}
+
+				.faq-question {
+					padding: 18px 20px;
+				}
+
+				.faq-answer {
+					padding-left: 48px;
+					padding-right: 20px;
+				}
+
+				.faq-item.active .faq-answer {
+					padding: 0 20px 18px 48px;
+				}
+			}
+		</style>
+
+		<script is:inline>
+			document.addEventListener("DOMContentLoaded", () => {
+				const faqItems = document.querySelectorAll(".faq-item");
+				faqItems.forEach((item) => {
+					const btn = item.querySelector(".faq-question");
+					btn.addEventListener("click", () => {
+						const isActive = item.classList.contains("active");
+						faqItems.forEach((i) => {
+							i.classList.remove("active");
+							i.querySelector(".faq-question").setAttribute(
+								"aria-expanded",
+								"false",
+							);
+						});
+						if (!isActive) {
+							item.classList.add("active");
+							btn.setAttribute("aria-expanded", "true");
+						}
+					});
+				});
+			});
+		</script>
 
 		<style>
 			/* --- PROCESSO DE CRIAÇÃO --- */
