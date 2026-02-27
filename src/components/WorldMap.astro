@@ -1,0 +1,6 @@
+---
+// O sufixo ?raw diz ao Astro para ler o arquivo apenas como texto
+import mapSvg from "./worldmap.svg?raw";
+---
+
+<div class="worldmap" set:html={mapSvg} />

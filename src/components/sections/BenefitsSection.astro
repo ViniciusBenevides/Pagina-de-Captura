@@ -100,7 +100,7 @@ const benefits = [
         {/* Conteúdo do Card (Texto e Grid) */}
         <div class="relative z-10 px-6 pt-12 pb-16 md:px-12 md:pb-20 md:pt-16">
             <h2
-                class="text-center text-3xl md:text-4xl mb-12 md:mb-16 font-medium text-[#ABAEB4]"
+                class="text-center text-3xl md:text-4xl mb-12 md:mb-16 font-medium text-[#ABAEB4] animate-on-scroll"
                 style="font-family: 'Paralucent', sans-serif;"
             >
                 Como uma <span class="text-[#E8EBF0] font-bold">Página</span> de alto
@@ -109,8 +109,10 @@ const benefits = [
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    benefits.map((item) => (
-                        <div class="group p-8 rounded-3xl bg-[#0a0b0f] border border-[#1f2125] hover:border-[#9AEBF7]/30 transition-all duration-300 hover:-translate-y-1">
+                    benefits.map((item, index) => (
+                        <div
+                            class={`group p-8 rounded-3xl bg-[#0a0b0f] border border-[#1f2125] hover:border-[#9AEBF7]/30 transition-all duration-300 hover:-translate-y-1 animate-on-scroll delay-${((index % 3) + 1) * 100}`}
+                        >
                             <h3
                                 class="text-xl font-bold mb-4 text-[#E8EBF0] group-hover:text-[#9AEBF7] transition-colors"
                                 style="font-family: 'Paralucent', sans-serif;"

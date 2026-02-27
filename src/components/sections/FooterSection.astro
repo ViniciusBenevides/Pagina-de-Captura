@@ -2,12 +2,13 @@
 import { Image } from "astro:assets";
 import VirtusApex from "../../assets/astro-framework1720735660.logowik.com-Recuperado2.png";
 import LogoApex from "../../assets/logo-apex.png";
+import WorldMap from "../WorldMap.astro";
 ---
 
 <footer class="site-footer relative z-20">
     <div class="footer-main">
         {/* Left content */}
-        <div class="footer-left">
+        <div class="footer-left animate-on-scroll delay-100">
             <p class="footer-tagline">
                 Inicie a jornada para ter um <strong
                     >site incrível hoje mesmo.</strong
@@ -26,7 +27,7 @@ import LogoApex from "../../assets/logo-apex.png";
         </div>
 
         {/* Right content */}
-        <div class="footer-right">
+        <div class="footer-right animate-on-scroll delay-200">
             <div class="footer-designed-by">
                 <span class="footer-designed-label">designed by</span>
                 <Image
@@ -55,11 +56,13 @@ import LogoApex from "../../assets/logo-apex.png";
         </div>
 
         {/* World map dots */}
-        <div class="footer-worldmap" id="footer-worldmap"></div>
+        <div class="footer-worldmap">
+            <WorldMap />
+        </div>
     </div>
 
     {/* Bottom bar */}
-    <div class="footer-bottom">
+    <div class="footer-bottom animate-on-scroll delay-300">
         <div class="footer-bottom-left">
             <p class="footer-cnpj">CNPJ: 63.685.153/0001-30</p>
             <p class="footer-rights">
@@ -451,220 +454,6 @@ import LogoApex from "../../assets/logo-apex.png";
         if (topBtn) {
             topBtn.addEventListener("click", () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        }
-
-        // --- World map dots ---
-        const worldmapEl = document.getElementById("footer-worldmap");
-        if (worldmapEl) {
-            // Simplified world map coordinates (normalized 0-1)
-            const mapData = [
-                // North America
-                [0.12, 0.25],
-                [0.14, 0.22],
-                [0.16, 0.2],
-                [0.18, 0.18],
-                [0.2, 0.2],
-                [0.22, 0.22],
-                [0.14, 0.28],
-                [0.16, 0.26],
-                [0.18, 0.25],
-                [0.2, 0.26],
-                [0.22, 0.28],
-                [0.24, 0.3],
-                [0.16, 0.32],
-                [0.18, 0.3],
-                [0.2, 0.32],
-                [0.22, 0.34],
-                [0.14, 0.34],
-                [0.12, 0.32],
-                [0.1, 0.28],
-                [0.08, 0.25],
-                [0.1, 0.22],
-                [0.12, 0.2],
-                [0.16, 0.18],
-                [0.18, 0.22],
-                [0.2, 0.24],
-                [0.15, 0.3],
-                [0.17, 0.28],
-                [0.19, 0.27],
-                [0.21, 0.3],
-                [0.23, 0.32],
-                [0.25, 0.34],
-                [0.24, 0.28],
-                [0.26, 0.32],
-                [0.13, 0.26],
-                [0.11, 0.24],
-                // Central America
-                [0.22, 0.38],
-                [0.23, 0.4],
-                [0.24, 0.42],
-                [0.25, 0.38],
-                [0.26, 0.4],
-                // South America
-                [0.28, 0.46],
-                [0.3, 0.48],
-                [0.32, 0.5],
-                [0.3, 0.52],
-                [0.28, 0.54],
-                [0.3, 0.56],
-                [0.32, 0.58],
-                [0.3, 0.6],
-                [0.28, 0.62],
-                [0.3, 0.64],
-                [0.32, 0.54],
-                [0.34, 0.52],
-                [0.34, 0.56],
-                [0.32, 0.6],
-                [0.3, 0.66],
-                [0.28, 0.68],
-                [0.26, 0.66],
-                [0.28, 0.5],
-                [0.26, 0.52],
-                [0.26, 0.58],
-                [0.34, 0.48],
-                [0.36, 0.5],
-                [0.35, 0.54],
-                [0.33, 0.62],
-                [0.31, 0.68],
-                [0.29, 0.7],
-                [0.27, 0.64],
-                [0.29, 0.58],
-                [0.31, 0.56],
-                // Europe
-                [0.46, 0.18],
-                [0.48, 0.16],
-                [0.5, 0.18],
-                [0.52, 0.16],
-                [0.48, 0.2],
-                [0.5, 0.22],
-                [0.52, 0.2],
-                [0.54, 0.18],
-                [0.46, 0.22],
-                [0.48, 0.24],
-                [0.5, 0.24],
-                [0.52, 0.22],
-                [0.44, 0.2],
-                [0.46, 0.16],
-                [0.48, 0.14],
-                [0.5, 0.14],
-                [0.52, 0.14],
-                [0.54, 0.16],
-                [0.56, 0.18],
-                [0.44, 0.24],
-                [0.46, 0.26],
-                [0.48, 0.26],
-                [0.53, 0.24],
-                [0.55, 0.2],
-                // Africa
-                [0.46, 0.34],
-                [0.48, 0.32],
-                [0.5, 0.34],
-                [0.52, 0.32],
-                [0.48, 0.36],
-                [0.5, 0.38],
-                [0.52, 0.36],
-                [0.48, 0.4],
-                [0.5, 0.42],
-                [0.52, 0.4],
-                [0.5, 0.46],
-                [0.52, 0.44],
-                [0.48, 0.44],
-                [0.5, 0.5],
-                [0.52, 0.48],
-                [0.54, 0.38],
-                [0.54, 0.42],
-                [0.54, 0.46],
-                [0.46, 0.38],
-                [0.46, 0.42],
-                [0.48, 0.48],
-                [0.5, 0.52],
-                [0.52, 0.52],
-                [0.54, 0.5],
-                [0.56, 0.44],
-                [0.56, 0.4],
-                [0.56, 0.36],
-                [0.48, 0.5],
-                [0.46, 0.46],
-                // Asia
-                [0.58, 0.16],
-                [0.6, 0.14],
-                [0.62, 0.16],
-                [0.64, 0.14],
-                [0.66, 0.16],
-                [0.68, 0.18],
-                [0.7, 0.2],
-                [0.6, 0.18],
-                [0.62, 0.2],
-                [0.64, 0.22],
-                [0.66, 0.24],
-                [0.68, 0.22],
-                [0.7, 0.24],
-                [0.72, 0.22],
-                [0.74, 0.24],
-                [0.6, 0.22],
-                [0.62, 0.24],
-                [0.64, 0.26],
-                [0.66, 0.28],
-                [0.68, 0.26],
-                [0.58, 0.2],
-                [0.56, 0.22],
-                [0.58, 0.24],
-                [0.6, 0.26],
-                [0.62, 0.28],
-                [0.72, 0.26],
-                [0.74, 0.28],
-                [0.76, 0.26],
-                [0.78, 0.24],
-                [0.64, 0.18],
-                [0.66, 0.2],
-                [0.7, 0.16],
-                [0.72, 0.18],
-                [0.74, 0.2],
-                [0.76, 0.22],
-                [0.58, 0.28],
-                [0.6, 0.3],
-                [0.62, 0.32],
-                [0.64, 0.3],
-                [0.66, 0.32],
-                [0.68, 0.3],
-                [0.7, 0.28],
-                [0.72, 0.3],
-                [0.56, 0.26],
-                [0.58, 0.14],
-                // Australia
-                [0.76, 0.52],
-                [0.78, 0.5],
-                [0.8, 0.52],
-                [0.82, 0.5],
-                [0.78, 0.54],
-                [0.8, 0.56],
-                [0.82, 0.54],
-                [0.84, 0.52],
-                [0.76, 0.56],
-                [0.78, 0.58],
-                [0.8, 0.58],
-                [0.82, 0.56],
-                [0.84, 0.54],
-                [0.76, 0.54],
-            ];
-
-            const container = worldmapEl;
-            const w = container.offsetWidth || 600;
-            const h = container.offsetHeight || 320;
-
-            mapData.forEach(([x, y]) => {
-                const dot = document.createElement("div");
-                dot.style.cssText = `
-                    position:absolute;
-                    left:${x * w}px;
-                    top:${y * h}px;
-                    width:3px;
-                    height:3px;
-                    background:#e8ebf0;
-                    border-radius:50%;
-                `;
-                container.appendChild(dot);
             });
         }
     });
