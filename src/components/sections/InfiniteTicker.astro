@@ -1,0 +1,33 @@
+---
+const carouselItems = [
+    "+ Confiança",
+    "+ Personalização",
+    "+ Comunicação",
+    "+ Profissionalismo",
+    "- Perdas",
+    "+ Conversões",
+];
+---
+
+<div class="py-2 border-y border-white/10 bg-[#202229] relative z-20">
+    <div class="overflow-hidden mask-gradient w-full">
+        <div
+            class="flex w-max animate-infinite-scroll gap-6 md:gap-8 items-center"
+            style="animation-duration: 80s;"
+        >
+            {
+                Array(12)
+                    .fill(carouselItems)
+                    .flat()
+                    .map((item) => (
+                        <div
+                            class="px-6 md:px-8 py-2 md:py-2.5 cursor-pointer rounded-full bg-[#0F1115] border border-[#1f2125] text-[#ABAEB4] font-medium whitespace-nowrap hover:border-[#3a3d45] hover:text-white transition-colors duration-300"
+                            style="font-family: 'Paralucent', sans-serif;font-size: 16px;"
+                        >
+                            {item}
+                        </div>
+                    ))
+            }
+        </div>
+    </div>
+</div>

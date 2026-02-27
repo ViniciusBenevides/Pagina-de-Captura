@@ -1,0 +1,296 @@
+---
+const benefits = [
+    {
+        title: "+ Conversões",
+        text: "Uma landing page bem projetada com um design impactante pode ajudar a aumentar as taxas de conversão, incentivando mais visitantes a se inscreverem ou comprarem o produto lançado.",
+    },
+    {
+        title: "+ Confiança",
+        text: "Um design impactante e uma apresentação bem estruturada ajudam a criar uma imagem confiável e segura do seu produto, aumentando a probabilidade de que os visitantes se sintam confortáveis ao fornecer suas informações.",
+    },
+    {
+        title: "+ Personalização",
+        text: "Uma landing page de alto padrão entrega uma personalização na experiência do usuário e faz um apelo mais emocional aos visitantes, incentivando-os a tomar medidas para se envolver com o seu produto.",
+    },
+    {
+        title: "+ Comunicação",
+        text: "Uma landing page bem projetada permite que você se comunique claramente com seus visitantes, oferecendo informações úteis sobre o produto, seus recursos e benefícios, e incentivando-os a agir.",
+    },
+    {
+        title: "+ Profissionalismo",
+        text: "Uma landing page de alta qualidade mostra que você leva a sério o seu negócio e está disposto a investir tempo e recursos em seus lançamentos de produtos digitais, criando uma impressão profissional nos visitantes.",
+    },
+    {
+        title: "- Perdas",
+        text: "Uma landing page de alto padrão consegue transmitir mais credibilidade na sua oferta, fazendo com que quando seu lead acessar sua página ele terá certeza que se trata de algo profissional, diminuindo as incertezas.",
+    },
+];
+---
+
+{/* --- 1. ONDAS EM CANVAS (Z-INDEX 0: Atrás dos cards) --- */}
+<div
+    class="absolute inset-0 z-0 pointer-events-none overflow-hidden h-full flex items-center justify-center"
+>
+    <canvas id="wave-canvas" class="w-full h-full"></canvas>
+</div>
+
+{/* 2. CONTAINER DOS CARDS (Z-INDEX 10: Acima das ondas) */}
+<div class="w-full px-4 mt-20 relative z-10">
+    {/* Bloco Principal do Card */}
+    <div
+        class="max-w-7xl mx-auto rounded-b-[40px] md:rounded-b-[60px] relative shadow-2xl shadow-black/50"
+        style="background-color: var(--card-section-bg);"
+    >
+        {/* --- HEADER DO CARD (A Curva "Derretida") --- */}
+        <div
+            class="absolute -top-[40px] left-0 right-0 h-[41px] flex items-end justify-center w-full overflow-visible pointer-events-none hidden md:flex"
+        >
+            <div
+                class="h-full flex-1 rounded-tl-[40px] md:rounded-tl-[60px]"
+                style="background-color: var(--card-section-bg);"
+            >
+            </div>
+            <div class="relative w-[180px] h-full shrink-0">
+                <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 180 41"
+                    preserveAspectRatio="none"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 0C0 0 30 0 30 0C55 0 65 38 90 38C115 38 125 0 150 0C150 0 180 0 180 0V41H0V0Z"
+                        fill="#15171ebf"></path>
+                </svg>
+                <div
+                    class="absolute top-[8px] left-1/2 -translate-x-1/2 text-[#ABAEB4]"
+                >
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M6 9L12 15L18 9"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+            <div
+                class="h-full flex-1 rounded-tr-[40px] md:rounded-tr-[60px]"
+                style="background-color: var(--card-section-bg);"
+            >
+            </div>
+        </div>
+
+        {
+            /* Header fixo para mobile para evitar os problemas de SVG em flexbox pequenos */
+        }
+        <div
+            class="absolute top-0 left-0 right-0 h-[30px] w-full rounded-t-[30px] bg-[var(--card-section-bg)] md:hidden pointer-events-none"
+        >
+        </div>
+
+        {/* Conteúdo do Card (Texto e Grid) */}
+        <div class="relative z-10 px-6 pt-12 pb-16 md:px-12 md:pb-20 md:pt-16">
+            <h2
+                class="text-center text-3xl md:text-4xl mb-12 md:mb-16 font-medium text-[#ABAEB4]"
+                style="font-family: 'Paralucent', sans-serif;"
+            >
+                Como uma <span class="text-[#E8EBF0] font-bold">Página</span> de alto
+                padrão pode te ajudar :
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {
+                    benefits.map((item) => (
+                        <div class="group p-8 rounded-3xl bg-[#0a0b0f] border border-[#1f2125] hover:border-[#9AEBF7]/30 transition-all duration-300 hover:-translate-y-1">
+                            <h3
+                                class="text-xl font-bold mb-4 text-[#E8EBF0] group-hover:text-[#9AEBF7] transition-colors"
+                                style="font-family: 'Paralucent', sans-serif;"
+                            >
+                                {item.title}
+                            </h3>
+                            <p
+                                class="text-[#ABAEB4] text-sm leading-relaxed font-light"
+                                style="font-family: 'Paralucent', sans-serif;"
+                            >
+                                {item.text}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    // ==========================================
+    // 2. ONDAS COM CANVAS (PERLIN NOISE)
+    // ==========================================
+    document.addEventListener("DOMContentLoaded", () => {
+        class ClassicalNoise {
+            constructor() {
+                this.grad3 = [
+                    [1, 1, 0],
+                    [-1, 1, 0],
+                    [1, -1, 0],
+                    [-1, -1, 0],
+                    [1, 0, 1],
+                    [-1, 0, 1],
+                    [1, 0, -1],
+                    [-1, 0, -1],
+                    [0, 1, 1],
+                    [0, -1, 1],
+                    [0, 1, -1],
+                    [0, -1, -1],
+                ];
+                this.p = [];
+                for (let i = 0; i < 256; i++) {
+                    this.p[i] = Math.floor(Math.random() * 256);
+                }
+                this.perm = [];
+                for (let i = 0; i < 512; i++) {
+                    this.perm[i] = this.p[i & 255];
+                }
+            }
+
+            dot(g, x, y, z) {
+                return g[0] * x + g[1] * y + g[2] * z;
+            }
+
+            mix(a, b, t) {
+                return (1.0 - t) * a + t * b;
+            }
+
+            fade(t) {
+                return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
+            }
+
+            noise(x, y, z) {
+                let X = Math.floor(x),
+                    Y = Math.floor(y),
+                    Z = Math.floor(z);
+
+                x = x - X;
+                y = y - Y;
+                z = z - Z;
+                X = X & 255;
+                Y = Y & 255;
+                Z = Z & 255;
+
+                let gi000 = this.perm[X + this.perm[Y + this.perm[Z]]] % 12;
+                let gi001 = this.perm[X + this.perm[Y + this.perm[Z + 1]]] % 12;
+                let gi010 = this.perm[X + this.perm[Y + 1 + this.perm[Z]]] % 12;
+                let gi011 =
+                    this.perm[X + this.perm[Y + 1 + this.perm[Z + 1]]] % 12;
+                let gi100 = this.perm[X + 1 + this.perm[Y + this.perm[Z]]] % 12;
+                let gi101 =
+                    this.perm[X + 1 + this.perm[Y + this.perm[Z + 1]]] % 12;
+                let gi110 =
+                    this.perm[X + 1 + this.perm[Y + 1 + this.perm[Z]]] % 12;
+                let gi111 =
+                    this.perm[X + 1 + this.perm[Y + 1 + this.perm[Z + 1]]] % 12;
+
+                let n000 = this.dot(this.grad3[gi000], x, y, z);
+                let n100 = this.dot(this.grad3[gi100], x - 1, y, z);
+                let n010 = this.dot(this.grad3[gi010], x, y - 1, z);
+                let n110 = this.dot(this.grad3[gi110], x - 1, y - 1, z);
+                let n001 = this.dot(this.grad3[gi001], x, y, z - 1);
+                let n101 = this.dot(this.grad3[gi101], x - 1, y, z - 1);
+                let n011 = this.dot(this.grad3[gi011], x, y - 1, z - 1);
+                let n111 = this.dot(this.grad3[gi111], x - 1, y - 1, z - 1);
+
+                let u = this.fade(x),
+                    v = this.fade(y),
+                    w = this.fade(z);
+
+                let nx00 = this.mix(n000, n100, u);
+                let nx01 = this.mix(n001, n101, u);
+                let nx10 = this.mix(n010, n110, u);
+                let nx11 = this.mix(n011, n111, u);
+                let nxy0 = this.mix(nx00, nx10, v);
+                let nxy1 = this.mix(nx01, nx11, v);
+                let nxyz = this.mix(nxy0, nxy1, w);
+
+                return nxyz;
+            }
+        }
+
+        const canvas = document.getElementById("wave-canvas");
+
+        if (canvas) {
+            const ctx = canvas.getContext("2d");
+            const perlin = new ClassicalNoise();
+            const variation = 0.0025;
+            const amp = 300;
+            const variators = [];
+            const max_lines =
+                navigator.userAgent.toLowerCase().indexOf("firefox") > -1
+                    ? 25
+                    : 40;
+
+            let canvasWidth = 0;
+            let canvasHeight = 0;
+            let start_y = 0;
+
+            for (let i = 0, u = 0; i < max_lines; i++, u += 0.02) {
+                variators[i] = u;
+            }
+
+            function draw() {
+                if (!ctx) return;
+                ctx.shadowColor = "rgba(43, 205, 255, 1)";
+                ctx.shadowBlur = 0;
+
+                for (let i = 0; i <= max_lines; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, start_y);
+                    let y = 0;
+
+                    for (let x = 0; x <= canvasWidth; x++) {
+                        y = perlin.noise(
+                            x * variation + variators[i],
+                            x * variation,
+                            0,
+                        );
+                        ctx.lineTo(x, start_y + amp * y);
+                    }
+
+                    const alpha = Math.min(Math.abs(y) + 0.05, 0.05);
+                    ctx.strokeStyle = "rgba(255,255,255," + alpha * 2 + ")";
+                    ctx.stroke();
+                    ctx.closePath();
+                    variators[i] += 0.005;
+                }
+            }
+
+            function resizeCanvas() {
+                if (!canvas.parentElement) return;
+                canvasWidth = canvas.parentElement.clientWidth;
+                canvasHeight = canvas.parentElement.clientHeight;
+                canvas.setAttribute("width", canvasWidth.toString());
+                canvas.setAttribute("height", canvasHeight.toString());
+                start_y = canvasHeight / 2;
+            }
+
+            function animateWaves() {
+                if (!ctx) return;
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                draw();
+                requestAnimationFrame(animateWaves);
+            }
+
+            resizeCanvas();
+            animateWaves();
+            window.addEventListener("resize", resizeCanvas);
+        }
+    });
+</script>

@@ -1,0 +1,259 @@
+---
+import { Image } from "astro:assets";
+import VirtusApex from "../../assets/astro-framework1720735660.logowik.com-Recuperado2.png";
+import drogariaImg from "../../assets/drogariacruzeiro_.jpg";
+import moradaImg from "../../assets/moradadossonhoswr.jpg";
+import raquelImg from "../../assets/psicraquelmarques.jpg";
+import remaImg from "../../assets/rema.engenharia_.jpg";
+import studioImg from "../../assets/studio_ragonete.jpg";
+import virtusImg from "../../assets/virtus_doctor.png";
+
+const teamMembers = [
+    { id: 1, handle: "@drogariacruzeiro", img: drogariaImg },
+    { id: 2, handle: "@moradadossonhoswr", img: moradaImg },
+    { id: 3, handle: "@psic.raquelmarques", img: raquelImg },
+    { id: 4, handle: "@rema.engenharia", img: remaImg },
+    { id: 5, handle: "@studio.ragonete", img: studioImg },
+    { id: 6, handle: "@virtus.doctor", img: virtusImg },
+];
+---
+
+<div
+    class="w-full max-w-5xl relative z-10 flex flex-col items-center h-full pt-10 px-4"
+>
+    <div
+        class="mb-8 opacity-100 hover:opacity-100 transition-opacity duration-500"
+    >
+        <Image
+            src={VirtusApex}
+            alt="Astro Framework Logo"
+            width={324.5}
+            height={75}
+            class="object-contain w-[250px] md:w-[324px]"
+        />
+    </div>
+
+    <div class="flex flex-col items-center justify-center mb-8">
+        <span
+            id="scramble-text"
+            class="font-medium tracking-wide leading-none text-[48px] md:text-[74px] text-[#e8ebf0]"
+            style="font-family: 'Paralucent', sans-serif;"
+        >
+            Landing Pages
+        </span>
+
+        <h2
+            class="font-medium leading-[1.1] mt-1.5 text-[36px] md:text-[56px] max-w-[800px]"
+            style="font-family: 'Paralucent', sans-serif;"
+        >
+            <span style="color: #ABAEB4;">que vendem,</span>
+            <span class="block md:inline" style="color: #E8EBF0;">
+                para projetos que conquistam resultados.
+            </span>
+        </h2>
+
+        <p
+            class="font-light mt-5 max-w-2xl mx-auto leading-relaxed text-[16px] md:text-[20px] text-[#E8EBF0]"
+            style="font-family: 'Paralucent', sans-serif;"
+        >
+            Entenda como um projeto digital maduro, construído com estratégia, é
+            o diferencial que separa quem lidera o nicho de quem apenas
+            participa dele.
+        </p>
+
+        {/* Spinner Button */}
+        <div
+            class="mt-10 relative group w-full max-w-[380px] h-[65px] md:h-[75px] mx-auto cursor-pointer z-10"
+        >
+            <div
+                class="absolute -inset-10 rounded-full bg-white/20 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+            >
+            </div>
+            <div
+                class="flash-overlay absolute inset-0 rounded-full bg-white pointer-events-none z-20 mix-blend-overlay"
+            >
+            </div>
+            <div
+                class="absolute inset-0 rounded-full overflow-hidden p-[1.5px] bg-[#5C666F]"
+            >
+                <div
+                    class="conic-spinner absolute inset-[-100%] w-[300%] h-[300%] left-[-100%] top-[-100%]"
+                >
+                </div>
+                <div
+                    class="h-full w-full bg-[#0F1115] rounded-full relative z-10"
+                >
+                </div>
+            </div>
+            <span
+                class="absolute top-0 left-[37.5px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+            ></span>
+            <span
+                class="absolute top-0 right-[37.5px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+            ></span>
+            <span
+                class="absolute bottom-0 left-[37.5px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+            ></span>
+            <span
+                class="absolute bottom-0 right-[37.5px] w-[2px] h-[2px] bg-white rounded-full z-20 shadow-[0_0_2px_white]"
+            ></span>
+            <a
+                href="https://wa.me/5562981752097?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute inset-0 z-30 flex items-center justify-center rounded-full"
+            >
+                <span
+                    class="tracking-widest font-medium mr-4 text-[16px] md:text-[18px] text-[#E8EBF0]"
+                    style="font-family: 'Paralucent', sans-serif;"
+                >
+                    ENVIAR MENSAGEM
+                </span>
+                <span
+                    class="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
+                        <path
+                            d="M5 19.5L19.5 5"
+                            stroke="#9AEBF7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M9.5 5H19.5V15"
+                            stroke="#9AEBF7"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        {/* Team Avatars */}
+        <div
+            class="mt-15 w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 relative z-20"
+        >
+            <div class="flex items-center justify-center group flex-wrap">
+                {
+                    teamMembers.map((member, index) => (
+                        <div
+                            class={`relative w-14 h-14 md:w-[72px] md:h-[72px] rounded-full border-[3px] border-[#0F1115] overflow-visible transition-all duration-300 ease-in-out group/item group-hover:grayscale hover:!grayscale-0 hover:scale-110 z-0 hover:z-20 ${index > 0 ? "-ml-4 md:-ml-5" : ""}`}
+                        >
+                            <img
+                                src={member.img.src}
+                                alt={member.handle}
+                                class="w-full h-full rounded-full object-cover"
+                            />
+                            <span
+                                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-[#15171c] border border-[#9AEBF7]/30 text-[#9AEBF7] text-xs font-medium tracking-wider rounded-md opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-300 whitespace-nowrap shadow-[0_0_15px_rgba(154,235,247,0.2)]"
+                                style="font-family: 'Paralucent', sans-serif;"
+                            >
+                                {member.handle}
+                                <span class="absolute top-full left-1/2 -translate-x-1/2 -mt-[1px] border-4 border-transparent border-t-[#15171c]" />
+                            </span>
+                        </div>
+                    ))
+                }
+            </div>
+            <div class="text-center md:text-left max-w-xs mt-4 md:mt-0">
+                <p
+                    class="font-light leading-tight text-[16px] md:text-[18px] text-[#ABAEB4]"
+                    style="font-family: 'Paralucent', sans-serif;"
+                >
+                    Dezenas de projetos entregues e clientes atendidos!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    // ==========================================
+    // 1. ANIMAÇÃO DE TEXTO SCRAMBLE
+    // ==========================================
+    document.addEventListener("DOMContentLoaded", () => {
+        const phrases = [
+            "Landing Pages",
+            "Páginas de Captura",
+            "Páginas de Vendas",
+        ];
+
+        const el = document.getElementById("scramble-text");
+        const chars = "!<>-_\\/[]{}—=+*^?#________";
+        let frameRequest;
+        let phraseIndex = 0;
+
+        const updateText = (newText) => {
+            if (!el) return Promise.resolve();
+            const oldText = el.innerText;
+            const length = Math.max(oldText.length, newText.length);
+
+            return new Promise((resolve) => {
+                const queue = [];
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || "";
+                    const to = newText[i] || "";
+                    const start = Math.floor(Math.random() * 40);
+                    const end = start + Math.floor(Math.random() * 40);
+                    queue.push({ from, to, start, end });
+                }
+
+                cancelAnimationFrame(frameRequest);
+                let frame = 0;
+
+                const animate = () => {
+                    let output = "";
+                    let complete = 0;
+
+                    for (let i = 0; i < queue.length; i++) {
+                        let { from, to, start, end, char } = queue[i];
+
+                        if (frame >= end) {
+                            complete++;
+                            output += to;
+                        } else if (frame >= start) {
+                            if (!char || Math.random() < 0.28) {
+                                char =
+                                    chars[
+                                        Math.floor(Math.random() * chars.length)
+                                    ];
+                                queue[i].char = char;
+                            }
+                            output += `<span class="opacity-50">${char}</span>`;
+                        } else {
+                            output += from;
+                        }
+                    }
+
+                    if (el) el.innerHTML = output;
+
+                    if (complete === queue.length) {
+                        resolve();
+                    } else {
+                        frameRequest = requestAnimationFrame(animate);
+                        frame++;
+                    }
+                };
+                animate();
+            });
+        };
+
+        const nextPhrase = () => {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            updateText(phrases[phraseIndex]).then(() => {
+                setTimeout(nextPhrase, 2000);
+            });
+        };
+
+        if (el) {
+            setTimeout(nextPhrase, 2000);
+        }
+    });
+</script>

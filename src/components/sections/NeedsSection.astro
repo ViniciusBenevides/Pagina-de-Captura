@@ -1,0 +1,283 @@
+---
+
+---
+
+<section class="needs-section py-16 md:py-20 pt-0 relative z-20 px-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="needs-grid">
+            {/* --- Card Esquerdo --- */}
+            <div class="needs-card needs-card--left">
+                <h2 class="needs-title">
+                    Quer descobrir se <strong>você<br />precisa</strong> de uma página<br
+                    />de Alto Padrão?
+                </h2>
+                <p class="needs-subtitle">
+                    Se você marcar uma ou mais opções desse checkbox, você
+                    precisa de uma página de alto padrão no seu negócio.
+                </p>
+                <a
+                    href="https://wa.me/5562981752097?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="needs-link"
+                >
+                    Quero saber mais
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
+                        <path
+                            d="M5 12H19M13 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            {/* --- Card Direito --- */}
+            <div class="needs-card needs-card--right">
+                <ul class="needs-checklist" id="needs-checklist">
+                    <li class="needs-item" data-checked="false">
+                        <span class="needs-icon needs-icon--dash">—</span>
+                        <span class="needs-text"
+                            >Deseja aumentar a taxa de conversão do seu site.</span
+                        >
+                    </li>
+                    <li class="needs-item" data-checked="false">
+                        <span class="needs-icon needs-icon--dash">—</span>
+                        <span class="needs-text"
+                            >Procura impressionar e conquistar a confiança dos
+                            visitantes.</span
+                        >
+                    </li>
+                    <li class="needs-item" data-checked="false">
+                        <span class="needs-icon needs-icon--dash">—</span>
+                        <span class="needs-text"
+                            >Pretende destacar-se da concorrência com um design
+                            excepcional.</span
+                        >
+                    </li>
+                    <li class="needs-item" data-checked="false">
+                        <span class="needs-icon needs-icon--dash">—</span>
+                        <span class="needs-text"
+                            >Está comprometido em oferecer a melhor experiência
+                            ao usuário.</span
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .needs-section {
+        background-color: transparent;
+    }
+
+    .needs-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .needs-card {
+        border-radius: 28px;
+        padding: 48px 44px;
+        height: 100%;
+    }
+
+    .needs-card--left {
+        background: #15171ebf;
+        border: 1px solid #ffffff10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .needs-card--right {
+        background: #0f1115;
+        border: 1px solid #1f2125;
+    }
+
+    .needs-title {
+        font-family: "Paralucent", sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        color: #abaeb4;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .needs-title strong {
+        color: #e8ebf0;
+        font-weight: 800;
+    }
+
+    .needs-subtitle {
+        font-family: "Paralucent", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        color: #9aebf7;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .needs-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Paralucent", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #abaeb4;
+        text-decoration: none;
+        transition:
+            color 0.2s ease,
+            gap 0.2s ease;
+        margin-top: 8px;
+        width: fit-content;
+    }
+
+    .needs-link:hover {
+        color: #e8ebf0;
+        gap: 12px;
+    }
+
+    .needs-checklist {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .needs-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 0;
+        border-bottom: 1px solid #1f2125;
+        cursor: pointer;
+        transition: background 0.2s;
+        user-select: none;
+    }
+
+    .needs-item:last-child {
+        border-bottom: none;
+    }
+
+    .needs-item:hover .needs-text {
+        color: #e8ebf0;
+    }
+
+    .needs-icon {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+        font-size: 14px;
+        transition: all 0.25s ease;
+    }
+
+    .needs-icon--check {
+        background: rgba(154, 235, 247, 0.12);
+        border: 1.5px solid #9aebf7;
+        color: #9aebf7;
+    }
+
+    .needs-icon--dash {
+        background: transparent;
+        border: 1.5px solid #3a3d45;
+        color: #5c666f;
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .needs-text {
+        font-family: "Paralucent", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: #abaeb4;
+        line-height: 1.5;
+        transition:
+            color 0.2s,
+            text-decoration 0.2s;
+    }
+
+    /* Checked State Modifier Classes */
+    .needs-item.needs-item--checked .needs-text {
+        text-decoration: line-through;
+        color: #5c666f;
+    }
+
+    .needs-item.needs-item--checked .needs-icon--check {
+        background: rgba(154, 235, 247, 0.15);
+        border-color: #9aebf7;
+    }
+
+    @media (max-width: 768px) {
+        .needs-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .needs-card {
+            padding: 32px 24px;
+            height: auto;
+        }
+
+        .needs-title {
+            font-size: 26px;
+        }
+
+        .needs-title br {
+            display: none;
+        }
+
+        .needs-item {
+            padding: 16px 0;
+        }
+    }
+</style>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll("#needs-checklist .needs-item");
+        items.forEach((item) => {
+            item.addEventListener("click", () => {
+                const isChecked = item.getAttribute("data-checked") === "true";
+                const icon = item.querySelector(".needs-icon");
+
+                if (isChecked) {
+                    item.setAttribute("data-checked", "false");
+                    item.classList.remove("needs-item--checked");
+                    icon.classList.remove("needs-icon--check");
+                    icon.classList.add("needs-icon--dash");
+                    icon.innerHTML = "—";
+                } else {
+                    item.setAttribute("data-checked", "true");
+                    item.classList.add("needs-item--checked");
+                    icon.classList.remove("needs-icon--dash");
+                    icon.classList.add("needs-icon--check");
+                    icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 13l4 4L19 7" stroke="#9AEBF7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>`;
+                }
+            });
+        });
+    });
+</script>

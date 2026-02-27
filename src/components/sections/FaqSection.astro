@@ -1,0 +1,258 @@
+---
+
+---
+
+<section class="faq-section py-16 md:py-24 relative z-20 px-4 md:px-6">
+    {/* Grid background */}
+    <div class="faq-grid-bg"></div>
+    {/* Watermark */}
+    <div class="faq-watermark">FAQ</div>
+
+    <div class="max-w-3xl mx-auto relative z-10">
+        <h2 class="faq-main-title">Perguntas Frequentes</h2>
+
+        <div class="faq-list" id="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-dash">—</span>
+                    <span class="faq-question-text"
+                        >O que é copy colaborativa ?</span
+                    >
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Se você não tiver a copy da sua página, ou seja, o texto
+                        que estará contido na mesma, nós poderemos criar juntos.
+                        Com as informações que você me fornecer sobre o seu
+                        produto/serviço, utilizarei meus conhecimentos e
+                        ferramentas de inteligência artificial para criar a
+                        copy. Mas é importante ressaltar, copywriting não é a
+                        minha área de especialização. A contratação isolada de
+                        um copywriter profissional será mais positiva para a
+                        efetivação dos seus resultados.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-dash">—</span>
+                    <span class="faq-question-text"
+                        >Qual o tempo de produção ?</span
+                    >
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        O tempo de produção é de até 14 dias, podendo ter uma
+                        entrega mais curta ou prolongada dependendo da
+                        quantidade de informações na página.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-dash">—</span>
+                    <span class="faq-question-text"
+                        >Qual é a forma de pagamento ?</span
+                    >
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        A forma de pagamento é via PIX ou transferência
+                        bancária. Podendo ser acertado o valor integral ou 50%
+                        no início do projeto e o restante na finalização.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="faq-dash">—</span>
+                    <span class="faq-question-text"
+                        >Poderei alterar meu projeto ?</span
+                    >
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Sim ! Após receber sua página pronta, você poderá
+                        analisá-la com calma e solicitar ajustes caso julgue
+                        necessário. Mas vale ressaltar, se alguma alteração
+                        envolver a adição de novas seções ou informações, poderá
+                        resultar em acréscimos no valor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* --- SEÇÃO FAQ --- */
+    .faq-section {
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+    .faq-grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.03) 1px,
+                transparent 1px
+            );
+        background-size: 60px 60px;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .faq-watermark {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Paralucent", sans-serif;
+        font-size: 180px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.03);
+        letter-spacing: 20px;
+        pointer-events: none;
+        z-index: 0;
+        user-select: none;
+        line-height: 1;
+    }
+
+    .faq-main-title {
+        font-family: "Paralucent", sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        color: #e8ebf0;
+        text-align: center;
+        margin: 0 0 48px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .faq-item {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid #1f2228;
+        border-radius: 14px;
+        overflow: hidden;
+        transition: border-color 0.3s ease;
+    }
+
+    .faq-item:hover {
+        border-color: #2a2f38;
+    }
+
+    .faq-question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 22px 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .faq-dash {
+        font-family: "Paralucent", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #e8ebf0;
+        flex-shrink: 0;
+    }
+
+    .faq-question-text {
+        font-family: "Paralucent", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #e8ebf0;
+        letter-spacing: 0.2px;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+            max-height 0.4s ease,
+            padding 0.4s ease;
+        padding: 0 28px 0 56px;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+        padding: 0 28px 22px 56px;
+    }
+
+    .faq-answer p {
+        font-family: "Paralucent", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: #abaeb4;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    @media (max-width: 640px) {
+        .faq-main-title {
+            font-size: 30px;
+            margin-bottom: 32px;
+        }
+
+        .faq-watermark {
+            font-size: 100px;
+            letter-spacing: 10px;
+            top: 10px;
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+        }
+
+        .faq-answer {
+            padding-left: 48px;
+            padding-right: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 18px 48px;
+            max-height: 500px; /* Alocação maior para mobile content */
+        }
+    }
+</style>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        const faqItems = document.querySelectorAll(".faq-item");
+        faqItems.forEach((item) => {
+            const btn = item.querySelector(".faq-question");
+            btn.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+                faqItems.forEach((i) => {
+                    i.classList.remove("active");
+                    i.querySelector(".faq-question").setAttribute(
+                        "aria-expanded",
+                        "false",
+                    );
+                });
+                if (!isActive) {
+                    item.classList.add("active");
+                    btn.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+    });
+</script>
