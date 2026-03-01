@@ -152,7 +152,8 @@ import WorldMap from "../WorldMap.astro";
     .footer-main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 60px;
+        grid-template-rows: auto auto;
+        column-gap: 60px;
         max-width: 1200px;
         margin: 0 auto;
         padding: 80px 48px 100px;
@@ -160,18 +161,20 @@ import WorldMap from "../WorldMap.astro";
     }
 
     .footer-worldmap {
-        position: absolute;
-        top: 50%;
-        left: 55%;
-        transform: translate(-30%, -50%);
-        width: 600px;
-        height: 320px;
+        grid-column: 2;
+        grid-row: 2;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-top: 40px;
         opacity: 0.15;
         pointer-events: none;
         z-index: 0;
     }
 
     .footer-left {
+        grid-column: 1;
+        grid-row: 1 / 3;
         position: relative;
         z-index: 1;
     }
@@ -210,6 +213,8 @@ import WorldMap from "../WorldMap.astro";
     }
 
     .footer-right {
+        grid-column: 2;
+        grid-row: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -385,9 +390,11 @@ import WorldMap from "../WorldMap.astro";
 
     @media (max-width: 768px) {
         .footer-main {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 40px;
             padding: 60px 24px 60px;
+            overflow: hidden;
         }
 
         .footer-right {
@@ -412,44 +419,106 @@ import WorldMap from "../WorldMap.astro";
         }
 
         .footer-worldmap {
+            grid-column: unset;
+            grid-row: unset;
+            position: absolute;
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
+            transform: translate(-30%, -50%); /* Adjusted transform */
+            width: 150%; /* Making width larger relative to parent */
+            max-width: none; /* Removing max width restriction */
+            height: auto;
+            margin-top: 0;
             opacity: 0.15;
+            pointer-events: none;
         }
     }
 </style>
 
 <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
-        // --- Footer rotating text ---
+        // --- Footer scramble text ---
         const footerRotatingEl = document.getElementById(
             "footer-rotating-text",
         );
         if (footerRotatingEl) {
-            const footerPhrases = [
+            const phrases = [
                 "Transforme visitantes em clientes.",
                 "Demonstre o valor da sua oferta.",
                 "Impressione seus leads.",
             ];
-            let footerPhraseIndex = 0;
 
-            function footerUpdateText() {
-                footerPhraseIndex =
-                    (footerPhraseIndex + 1) % footerPhrases.length;
-                footerRotatingEl.style.opacity = "0";
-                footerRotatingEl.style.transform = "translateY(10px)";
-                setTimeout(() => {
-                    footerRotatingEl.textContent =
-                        footerPhrases[footerPhraseIndex];
-                    footerRotatingEl.style.opacity = "1";
-                    footerRotatingEl.style.transform = "translateY(0)";
-                }, 400);
-            }
+            const chars = "!<>-_\\/[]{}—=+*^?#________";
+            let frameRequest;
+            let phraseIndex = 0;
 
-            footerRotatingEl.style.transition =
-                "opacity 0.4s ease, transform 0.4s ease";
-            setInterval(footerUpdateText, 3000);
+            const updateText = (newText) => {
+                if (!footerRotatingEl) return Promise.resolve();
+                const oldText = footerRotatingEl.innerText;
+                const length = Math.max(oldText.length, newText.length);
+
+                return new Promise((resolve) => {
+                    const queue = [];
+                    for (let i = 0; i < length; i++) {
+                        const from = oldText[i] || "";
+                        const to = newText[i] || "";
+                        const start = Math.floor(Math.random() * 40);
+                        const end = start + Math.floor(Math.random() * 40);
+                        queue.push({ from, to, start, end });
+                    }
+
+                    cancelAnimationFrame(frameRequest);
+                    let frame = 0;
+
+                    const animate = () => {
+                        let output = "";
+                        let complete = 0;
+
+                        for (let i = 0; i < queue.length; i++) {
+                            let { from, to, start, end, char } = queue[i];
+
+                            if (frame >= end) {
+                                complete++;
+                                output += to;
+                            } else if (frame >= start) {
+                                if (!char || Math.random() < 0.28) {
+                                    char =
+                                        chars[
+                                            Math.floor(
+                                                Math.random() * chars.length,
+                                            )
+                                        ];
+                                    queue[i].char = char;
+                                }
+                                /* Use inline opacity style to guarantee display */
+                                output += `<span style="opacity: 0.5">${char}</span>`;
+                            } else {
+                                output += from;
+                            }
+                        }
+
+                        if (footerRotatingEl)
+                            footerRotatingEl.innerHTML = output;
+
+                        if (complete === queue.length) {
+                            resolve();
+                        } else {
+                            frameRequest = requestAnimationFrame(animate);
+                            frame++;
+                        }
+                    };
+                    animate();
+                });
+            };
+
+            const nextPhrase = () => {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                updateText(phrases[phraseIndex]).then(() => {
+                    setTimeout(nextPhrase, 2000);
+                });
+            };
+
+            setTimeout(nextPhrase, 2000);
         }
 
         // --- Scroll to top ---
