@@ -436,7 +436,8 @@ import WorldMap from "../WorldMap.astro";
 </style>
 
 <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
+    // Execution inside an IIFE to avoid global scope pollution
+    (function () {
         // --- Footer scramble text ---
         const footerRotatingEl = document.getElementById(
             "footer-rotating-text",
@@ -526,7 +527,13 @@ import WorldMap from "../WorldMap.astro";
         if (topBtn) {
             topBtn.addEventListener("click", () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
+                // Fallbacks in case html/body height: 100% prevents window from scrolling
+                document.documentElement.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+                document.body.scrollTo({ top: 0, behavior: "smooth" });
             });
         }
-    });
+    })();
 </script>
