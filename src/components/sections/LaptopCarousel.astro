@@ -5,7 +5,7 @@ import img1 from "../../assets/Advogado-03-01-2026_10_50_AM.png";
 import img2 from "../../assets/Drogaria-Cruzeiro-Entrega-Grátis-e-Rápida-03-01-2026_11_01_AM.png";
 import img3 from "../../assets/Estetica-03-01-2026_10_59_AM.png";
 import img4 from "../../assets/Imóveis-em-Goiânia-03-01-2026_10_53_AM.png";
-import img5 from "../../assets/Página-de-links-Raquel-Marques-03-01-2026_10_55_AM.png";
+import img5 from "../../assets/Página-de-links-Raquel-Marques-03-02-2026_10_30_AM.png";
 import img6 from "../../assets/Rema-Engenharia-03-01-2026_10_58_AM.png";
 import img7 from "../../assets/Virtus-Doctor-03-01-2026_10_51_AM.png";
 ---
@@ -65,7 +65,7 @@ import img7 from "../../assets/Virtus-Doctor-03-01-2026_10_51_AM.png";
             loop: true,
             speed: 2000,
             autoplay: {
-                delay: 2000,
+                delay: 2000000,
                 disableOnInteraction: false,
             },
         });
@@ -100,7 +100,7 @@ import img7 from "../../assets/Virtus-Doctor-03-01-2026_10_51_AM.png";
     }
 
     .laptop-base {
-        margin-top: -7px;
+        margin-top: -103px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -125,14 +125,14 @@ import img7 from "../../assets/Virtus-Doctor-03-01-2026_10_51_AM.png";
         z-index: 10;
         pointer-events: none;
         width: 625px;
-        height: 365px;
+        height: 385px;
     }
 
     .laptop-frame-overlay img {
         width: 625px;
-        height: 393px;
+        height: 304px;
         display: block;
-        object-fit: contain;
+        object-fit: fill;
     }
 
     .swiper {
@@ -151,27 +151,27 @@ import img7 from "../../assets/Virtus-Doctor-03-01-2026_10_51_AM.png";
     .swiper-slide img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: top;
     }
 
     @media (max-width: 768px) {
         .laptop-frame-overlay {
             width: 340px;
-            height: 213px;
+            height: 209px;
         }
         .laptop-frame-overlay img {
             width: 340px;
-            height: 213px;
+            height: 165px;
         }
         .laptop-base {
             width: 380px;
             transform: translate(-50%, -50%);
-            margin-top: -4px;
+            margin-top: -57px;
         }
         .swiper-slide {
-            width: 258px !important;
-            height: 162px;
+            width: 288px !important;
+            height: 196px;
             border-radius: 8px; /* Slightly smaller radius on mobile */
         }
         /* Ajuste do gradiente para telas menores para não "comer" muito a tela */
