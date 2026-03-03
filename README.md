@@ -1,46 +1,53 @@
-# Astro Starter Kit: Basics
+# Virtus Apex
 
-```sh
-npm create astro@latest -- --template basics
-```
+Bem-vindo ao repositório do projeto **Virtus Apex** — um portfólio e página de serviços focada na criação de **Landing Pages de Alta Conversão** com design exclusivo e de alto desempenho.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 💻 Sobre o Projeto
 
-## 🚀 Project Structure
+O projeto apresenta o portfólio profissional de **Vinícius Benevides**, focando em soluções completas de Web Design e Desenvolvimento com o objetivo de transformar visitantes em clientes. A Landing Page incorpora seções estratégicas de vendas, demonstrações de capturas e carrosséis dinâmicos criados do zero. 
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Tecnologias Utilizadas
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- **[Astro](https://astro.build/)** para a construção das rotas e renderização HTML extremamente rápida.
+- **[Tailwind CSS](https://tailwindcss.com/)** para o design moderno e estilos responsivos.
+- **JavaScript Vanilla** para micro-interações do site (ex: Intersection Observers, Animações no Scroll, Infinite Tickers).
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📸 Capturas de Tela (Screenshots)
 
-## 🧞 Commands
+*Substitua as marcações abaixo com os links (ou caminhos locais, ex: `./public/print.png`) reais das imagens do seu projeto:*
 
-All commands are run from the root of the project, from a terminal:
+### 🌟 Hero Section (Início)
+![Placeholder Hero](`./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_32_AM.png`)
+*(Substitua a URL acima pela imagem de sua Hero Section)*
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### ✨ Diferenciais & Benefícios
+![Placeholder Diferenciais](`./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_40_AM.png`)
+![Placeholder Benefícios](`./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_41_AM.png`)
+*(Substitua a URL acima pela imagem de outras sessões do site)*
 
-## 👀 Want to learn more?
+### 💰 Planos e Preços
+![Placeholder Planos](`./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_42_AM.png`)
+![Placeholder Preços](`./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_43_AM.png`)
+*(Substitua a URL acima pela imagem da tabela de preços)*
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## ⚙️ Como Rodar o Projeto Localmente
+
+1. Clone o repositório
+   ```bash
+   git clone https://github.com/ViniciusBenevides/Virtus-Apex.git
+   ```
+2. Instale as dependências
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento
+   ```bash
+   npm run dev
+   ```
+   *O site estará disponível normalmente em: `http://localhost:4321`*
+
+## 🌐 Open Graph / Compartilhamento
+O site conta com validação de SEO básico e uso das Tags **Open Graph**. Ao enviar a URL oficial do seu projeto em aplicativos como WhatsApp, Discord e LinkedIn, a Thumbnail customizada com o selo Virtus Apex aparecerá perfeitamente.
+
+---
+*Feito com muito design e foco em conversão por **Vinícius Benevides**.*
