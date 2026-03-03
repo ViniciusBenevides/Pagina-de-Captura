@@ -22,8 +22,8 @@ O projeto apresenta o portfólio profissional de **Vinícius Benevides**, focand
 ![Placeholder Benefícios](./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_41_AM.png)
 
 ### 💰 Planos e Preços
-![Placeholder Planos](./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_42_AM.png)
-![Placeholder Preços](./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_43_AM.png)
+![Placeholder Planos](./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_50_AM.png)
+![Placeholder Preços](./public/Virtus-Apex-Landing-Pages-Exclusivas-03-03-2026_10_50_AM (1).png)
 
 ## ⚙️ Como Rodar o Projeto Localmente
 
