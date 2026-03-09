@@ -2,6 +2,7 @@
 // 1. IMPORTANDO O CSS DO TAILWIND
 // Isso avisa pro site carregar os estilos globais
 import "../styles/global.css";
+import LoaderScreen from "../components/LoaderScreen.astro";
 
 // 2. DEFININDO AS PROPRIEDADES
 // Isso permite que você mude o título da aba do navegador em cada página
@@ -33,7 +34,10 @@ const { title } = Astro.props;
 			property="og:description"
 			content="Especialista em Landing Pages de Alta Conversão. Transforme curiosos em clientes com designs exclusivos e de alto desempenho."
 		/>
-		<meta property="og:image" content="/og-image.png" />
+		<meta
+			property="og:image"
+			content="https://virtusapex.com/og-image.png"
+		/>
 		<!-- Adicione sua imagem de capa (ex: 1200x630) na pasta public com o nome og-image.png -->
 
 		<!-- Twitter -->
@@ -44,11 +48,15 @@ const { title } = Astro.props;
 			property="twitter:description"
 			content="Especialista em Landing Pages de Alta Conversão. Transforme curiosos em clientes com designs exclusivos e de alto desempenho."
 		/>
-		<meta property="twitter:image" content="/og-image.png" />
+		<meta
+			property="twitter:image"
+			content="https://virtusapex.com/og-image.png"
+		/>
 
 		<title>{title}</title>
 	</head>
 	<body>
+		<LoaderScreen />
 		<slot />
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
